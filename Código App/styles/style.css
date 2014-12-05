@@ -419,7 +419,7 @@ body {
 }
 
 .facebook-footer{
-	background-image:url(../images/misc/facebook.png);
+	background-image:url(http://www.reintegracion.gov.co/Style%20Library/Reintegracion/css/images/social/facebook.png);
 	background-repeat:no-repeat;
 	background-size:27px 27px;
 	height:27px;
@@ -435,12 +435,37 @@ body {
 }
 
 .twitter-footer{
-	background-image:url(../images/misc/twitter.png);
+	background-image:url(http://www.reintegracion.gov.co/Style%20Library/Reintegracion/css/images/social/twitter.png);
 	background-repeat:no-repeat;
 	background-size:27px 27px;
 	height:27px;
 	width:27px;
 }
+
+.flickr-footer{
+	background-image:url(http://www.reintegracion.gov.co/Style%20Library/Reintegracion/css/images/social/flickr.png);
+	background-repeat:no-repeat;
+	background-size:27px 27px;
+	height:27px;
+	width:27px;
+}
+
+.youtube-footer{
+	background-image:url(http://www.reintegracion.gov.co/Style%20Library/Reintegracion/css/images/social/youtube.png);
+	background-repeat:no-repeat;
+	background-size:27px 27px;
+	height:27px;
+	width:27px;
+}
+
+.youtube-footer{
+	background-image:url(http://www.reintegracion.gov.co/Style%20Library/Reintegracion/css/images/social/storify.png);
+	background-repeat:no-repeat;
+	background-size:27px 27px;
+	height:27px;
+	width:27px;
+}
+
 
 
 /*Wide Portfolio*/
