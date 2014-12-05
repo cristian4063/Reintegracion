@@ -18,14 +18,165 @@
         media="(device-width: 768px)	and (orientation: landscape)	and (-webkit-device-pixel-ratio: 2)" />
     <title>Servicio de Empleo Móvil</title>
     <link href="styles/style.css" rel="stylesheet" type="text/css">
-    <link href="styles/colors/default.css" rel="stylesheet" type="text/css" id="pagestyle">
+    <link href="styles/colors/default.css" rel="stylesheet" type="text/css" id="Link1">
     <link href="styles/framework.css" rel="stylesheet" type="text/css">
     <link href="styles/owl.carousel.css" rel="stylesheet" type="text/css">
     <link href="styles/owl.theme.css" rel="stylesheet" type="text/css">
     <link href="styles/swipebox.css" rel="stylesheet" type="text/css">
+    <link href="styles/jquery-ui.css" rel="stylesheet" type="text/css">
     <link href="styles/colorbox.css" rel="stylesheet" type="text/css">
+    <link href="styles/combobox.css" rel="stylesheet" type="text/css">
     <link href="styles/general.css" rel="stylesheet" type="text/css">
+    <style type="text/css">
+        .styled-select {
+            width: 95%;
+            height: 34px;
+            overflow: hidden;
+            background: url(images/flecha_abajo.png) no-repeat right #ddd;
+            padding: 3px;
+            margin: 5px;
+            -webkit-border-radius: 4px;
+            -moz-border-radius: 4px;
+            border-radius: 4px;
+            -webkit-box-shadow: 0 3px 0 #ccc, 0 -1px #fff inset;
+            -moz-box-shadow: 0 3px 0 #ccc, 0 -1px #fff inset;
+            box-shadow: 0 3px 0 #ccc, 0 -1px #fff inset;
+            color: #888;
+            border: none;
+            outline: none;
+            display: inline-block;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            cursor: pointer;
+        }
 
+        .icon-balloons {
+            background-image: url(images/icons/misc/balloons.png);
+        }
+
+        .botonLetra {
+            margin-right: 10px;
+            float: left;
+            width: 20px;
+            margin-bottom: 10px;
+        }
+
+        .infoDiv {
+            height: 100px;
+            -webkit-user-select: none;
+            background-color: white;
+        }
+
+        .CargandoModalBackground {
+            overflow: hidden;
+            background-color: #0D0D0D;
+            filter: alpha(opacity=90);
+            opacity: 0.9;
+            position: fixed;
+            top: 0px;
+            left: 0px;
+            text-align: center;
+            vertical-align: middle;
+            width: 100%;
+            height: 100%;
+            display: none;
+            z-index: 9999;
+            color: white;
+            text-align: left;
+        }
+
+        .cuadro-internet-connection {
+            position: fixed;
+            overflow: auto;
+            bottom: 0px;
+            z-index: 800;
+            left: 20px;
+            padding: 7px 10px 7px 10px;
+            -webkit-border-radius: 4px 4px 0 0;
+            -moz-border-radius: 4px 4px 0 0;
+            -ms-border-radius: 4px 4px 0 0;
+            -o-border-radius: 4px 4px 0 0;
+            border-radius: 4px 4px 0 0;
+            -webkit-box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15);
+            -moz-box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15);
+            box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15);
+            background: #f6f6f6;
+            color: #888888;
+        }
+
+        .circulo-internet-connection {
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            background: #80d580;
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            -ms-border-radius: 50%;
+            -o-border-radius: 50%;
+            border-radius: 50%;
+            display: block;
+            position: absolute;
+            top: 0;
+            bottom: 1px;
+            left: 8px;
+            margin: auto;
+            height: 9px;
+            width: 9px;
+        }
+
+        .ui-icon-closethick {
+            background-image: url('images/ui/close.png') !important;
+            background-position: 25% 20%;
+            ;
+        }
+
+        .ui-icon-circle-triangle-e {
+            background-image: url('../images/ui/next-arrow.png') !important;
+        }
+
+        .ui-icon-circle-triangle-w {
+            background-image: url('../images/ui/previous-arrow.png') !important;
+        }
+
+
+        #footer > div {
+            overflow: hidden;
+        }
+
+        .ui-dialog .ui-dialog-content {
+            background-color: white;
+        }
+
+        .ui-widget-header {
+            background: #F9B70A url("images/ui-bg_gloss-wave_35_f6a828_500x100.png") 50% 50% repeat-x;
+        }
+
+        .ui-dialog .ui-dialog-content {
+            padding: 18px 0px 1px 21px;
+        }
+
+        .p66 {
+            width: 66%;
+        }
+
+        
+
+    </style>
+    <style type="text/css">
+        .toggle-1, .toggle-2, .toggle-3{
+            background-color: #e6e6e6;
+        }
+
+        .red-notification {
+            background-color: #C51E2D;
+        }
+
+        .green-bubble {
+            background-color: #C51E2D !important;
+        }
+
+    </style>
     <script type="text/javascript" src="scripts/jquery.js"></script>
     <script type="text/javascript" src="scripts/jqueryui.js"></script>
     <script type="text/javascript" src="scripts/owl.carousel.min.js"></script>
@@ -36,19 +187,16 @@
     <script type="text/javascript" src="scripts/custom.js"></script>
     <script type="text/javascript" src="scripts/framework.js"></script>
     <script type="text/javascript" src="scripts/framework.launcher.js"></script>
-    <script type="text/javascript" src="scripts/faqs.js"></script>
+    <script type="text/javascript" src="scripts/bd.js"></script>
     <script type="text/javascript" src="scripts/general.js"></script>
-    <script type="text/javascript" src="scripts/connection.js"></script>
-    <style type="text/css">
-        .blue-bubble
-        {
-            background-color: #E84427 !important;
-            color: #FFFFFF !important;
-            border: none !important;
-        }
-    </style>
+    <script type="text/javascript" src="scripts/jquery-ui.js"></script>
+    <script type="text/javascript" src="scripts/vacantes_favoritas.js"></script>
 </head>
 <body>
+    <div id="div-confirm" style="display: none">
+        <div id="content-alert">
+        </div>
+    </div>
     <div id="preloader">
         <div id="status">
             <p class="center-text">
@@ -84,7 +232,7 @@
                         </div>
                         <div class="nav-item">
                             <a href="vacantes_favoritas.html" class="active-nav home-favoritas">Mis vacantes favoritas
-                                <em class="unselected-item"></em></a>
+                                <em class="selected-item"></em></a>
                         </div>
                         <div class="sidebar-decoration">
                         </div>
@@ -103,7 +251,7 @@
                                     Inicio sesion <em class="unselected-item" style="right: 29px;"></em>
                                 </a>
                                 <a id="opc_Registrar" name="opc_Registrar" href="RegistrarOferta.html" class="active-nav home-favoritas">
-                                    Publicar vacante nueva<em class="selected-item"></em>
+                                    Publicar vacante nueva<em class="unselected-item"></em>
                                 </a>
                                 <a id="opc_VerMias" name="opc_VerMias" href="lista_ofertas_empleador.html" class="active-nav home-favoritas">
                                     Gestionar vacantes <em class="unselected-item"></em>
@@ -118,7 +266,7 @@
                         <div class="sidebar-decoration">
                         </div>
                         <div class="nav-item">
-                            <a href="faqs.html" class="active-nav home-faqs">Preguntas Frecuentes <em class="selected-item">
+                            <a href="faqs.html" class="active-nav home-faqs">Preguntas Frecuentes <em class="unselected-item">
                             </em></a>
                         </div>
                         <div class="sidebar-decoration">
@@ -136,9 +284,10 @@
             </div>
         </div>
         <div id="content" class="page-content">
-            <div id="header" class="content-controls" style="margin-bottom: 10px; padding-bottom: 10px; background-color: #E84427;">
+            <div id="header" class="content-controls" style="margin-bottom: 10px; padding-bottom: 10px;
+                background-color: #C51E2D;">
                 <a href="#" class="deploy-sidebar"></a><em style="text-transform: uppercase; font-size: medium;
-                    font-weight: bold; color: white; text-align: center;">Servicio de Empleo Móvil</em>
+                    font-weight: bold; color: white; text-align: center;">Agencia Colombiana para la Reintegración</em>
             </div>
             <div class="content">
                 <div class="decoration">
@@ -147,37 +296,47 @@
                     <em style="font-size: medium;"><strong>PREGUNTAS FRECUENTES</strong></em>
                 </div>
                 <div class="container">
-                    <div class="big-notification red-notification" style="background-color: #F9B234;">
+                    <div class="big-notification red-notification">
                         <h4 style="padding-right: 20px;">
-                            En esta sección encontrará respuesta a las preguntas más frecuentes sobre el funcionamiento
-                            del app</h4>
+                            En esta sección encontrará la lista de vacantes pre-seleccionadas por usted y que
+                            todavía se encuentran vigentes</h4>
                         <a href="#" class="close-big-notification">X </a>
                     </div>
                 </div>
                 <div class="decoration">
                 </div>
-                <div id="preguntas" class="container no-bottom">
-                </div>
-                <div id="loading" class="CargandoModalBackground" style="text-align: center;">
-                    <div style="top: 48%;">
-                        <img src="images/bx_loader.gif" alt="loding" style="display: inline;" />
-                    </div>
-                </div>
-                <div>
-                    <h3>
-                        <label id="label_registros" style="text-align: center; color: black;">
-                        </label>
-                    </h3>
-                </div>
+                
+
+                <!--<div class="container no-bottom">
+                <h4>Preguntas Frecuentes</h4>
+                </div>-->       
                 <div class="container no-bottom">
-                    <div style="float: left;">
-                        <img onclick="paginarAnterior()" id="flechas_paginacion_izq" src="images/flecha_izquierda.png"
-                            alt="Página anterior" style="width: 35px;" />
-                    </div>
-                    <div style="float: right;">
-                        <img onclick="paginarSiguiente()" id="flechas_paginacion_der" src="images/flecha_derecha.png"
-                            alt="Página anterior" style="width: 35px;" />
-                    </div>
+                
+                    <p class="speach-left" style="background-color: #e6e6e6;">¿Qué es la Reintegración?</p>
+                    
+                    <div class="clear"></div>
+                    
+                    <p class="speach-right green-bubble">La Reintegración es una oferta de seis años y medio que el Estado colombiano, a través de la Agencia Colombiana para la Reintegración, ACR, los ofrece a las personas desmovilizadas de los grupos armados ilegales que quieren reintegrarse a la vida social y económica</p>
+                    
+                    <div class="clear"></div>  
+                         
+                    <p class="speach-left" style="background-color: #e6e6e6;">¿Quiénes pueden acceder al Proceso de Reintegración?</p> 
+                    
+                    <div class="clear"></div>
+                    
+                    <p class="speach-right green-bubble">Al proceso pueden acceder las personas acreditadas como desmovilizadas por el Comité Operativo para la Dejación de las Armas (CODA) o la Oficina del Alto Comisionado para la Paz, que se desmovilizaron después del 24 de enero de 2003</p>
+
+                    <div class="clear"></div>  
+                         
+                    <p class="speach-left" style="background-color: #e6e6e6;">¿Cuáles son los beneficios del Proceso de Reintegración?</p> 
+                    
+                    <div class="clear"></div>
+                    
+                    <p class="speach-right green-bubble">La ACR tiene claro que la reintegración es un ingrediente fundamental para avanzar en el camino hacia la paz. La Política de Reintegración ofrece asesoría para obtener beneficios jurídicos y sociales para que las personas desmovilizadas adquieran competencias y habilidades que les facilitarán su regreso a la vida en sociedad</p>
+                </div>
+
+
+                <div class="decoration">
                 </div>
                 <div class="container" style="padding: 5px;">
                     <a style="float: right;" href="#" class="goup-footer"></a>
@@ -194,11 +353,5 @@
                 </div>
             </div>
         </div>
-        <!--<div class="cuadro-internet-connection">
-            <div id="div-internet-connection" class="circulo-internet-connection">
-            </div>
-            <label style="padding-left: 12px;" id="label-internet-connection">
-                Online</label>
-        </div>-->
 </body>
 </html> 
