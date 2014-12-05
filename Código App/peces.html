@@ -1,0 +1,597 @@
+﻿<!DOCTYPE html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/splash/splash-icon.png">
+    <link rel="apple-touch-startup-image" href="images/splash/splash-screen.png" media="screen and (max-device-width: 320px)" />
+    <link rel="apple-touch-startup-image" href="images/splash/splash-screen@2x.png" media="(max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2)" />
+    <link rel="apple-touch-startup-image" sizes="640x1096" href="images/splash/splash-screen@3x.png" />
+    <link rel="apple-touch-startup-image" sizes="1024x748" href="images/splash/splash-screen-ipad-landscape"
+          media="screen and (min-device-width : 481px) and (max-device-width : 1024px) and (orientation : landscape)" />
+    <link rel="apple-touch-startup-image" sizes="768x1004" href="images/splash/splash-screen-ipad-portrait.png"
+          media="screen and (min-device-width : 481px) and (max-device-width : 1024px) and (orientation : portrait)" />
+    <link rel="apple-touch-startup-image" sizes="1536x2008" href="images/splash/splash-screen-ipad-portrait-retina.png"
+          media="(device-width: 768px)  and (orientation: portrait) and (-webkit-device-pixel-ratio: 2)" />
+    <link rel="apple-touch-startup-image" sizes="1496x2048" href="images/splash/splash-screen-ipad-landscape-retina.png"
+          media="(device-width: 768px) and (orientation: landscape)    and (-webkit-device-pixel-ratio: 2)" />
+    <title>OCD</title>
+    <link href="styles/style.css" rel="stylesheet" type="text/css">
+    <link href="styles/framework.css" rel="stylesheet" type="text/css">
+    <link href="styles/owl.carousel.css" rel="stylesheet" type="text/css">
+    <link href="styles/owl.theme.css" rel="stylesheet" type="text/css">
+    <link href="styles/swipebox.css" rel="stylesheet" type="text/css">
+    <link href="styles/colorbox.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="scripts/jquery.js"></script>
+    <script type="text/javascript" src="scripts/jqueryui.js"></script>
+    <script type="text/javascript" src="scripts/owl.carousel.min.js"></script>
+    <script type="text/javascript" src="scripts/jquery.swipebox.js"></script>
+    <script type="text/javascript" src="scripts/colorbox.js"></script>
+    <script type="text/javascript" src="scripts/snap.js"></script>
+    <script type="text/javascript" src="scripts/contact.js"></script>
+    <script type="text/javascript" src="scripts/custom.js"></script>
+    <script type="text/javascript" src="scripts/framework.js"></script>
+    <script type="text/javascript" src="scripts/framework.launcher.js"></script>
+    <style type="text/css">
+        .styled-select {
+            width: 95%;
+            height: 34px;
+            overflow: hidden;
+            background: url(images/flecha_abajo.png) no-repeat right #ddd;
+            padding: 3px;
+            margin: 5px;
+            -webkit-border-radius: 4px;
+            -moz-border-radius: 4px;
+            border-radius: 4px;
+            -webkit-box-shadow: 0 3px 0 #ccc, 0 -1px #fff inset;
+            -moz-box-shadow: 0 3px 0 #ccc, 0 -1px #fff inset;
+            box-shadow: 0 3px 0 #ccc, 0 -1px #fff inset;
+            color: #888;
+            border: none;
+            outline: none;
+            display: inline-block;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            cursor: pointer;
+        }
+
+        .icon-balloons {
+            background-image: url(images/icons/misc/balloons.png);
+        }
+
+        .botonLetra {
+            margin-right: 10px;
+            float: left;
+            width: 20px;
+            margin-bottom: 10px;
+        }
+
+        .infoDiv {
+            height: 100px;
+            -webkit-user-select: none;
+            background-color: white;
+        }
+
+        .CargandoModalBackground {
+            overflow: hidden;
+            background-color: #0D0D0D;
+            filter: alpha(opacity=90);
+            opacity: 0.9;
+            position: fixed;
+            top: 0px;
+            left: 0px;
+            text-align: center;
+            vertical-align: middle;
+            width: 100%;
+            height: 100%;
+            display: none;
+            z-index: 9999;
+            color: white;
+            text-align: left;
+        }
+
+        .cuadro-internet-connection {
+            position: fixed;
+            overflow: auto;
+            bottom: 0px;
+            z-index: 800;
+            left: 20px;
+            padding: 7px 10px 7px 10px;
+            -webkit-border-radius: 4px 4px 0 0;
+            -moz-border-radius: 4px 4px 0 0;
+            -ms-border-radius: 4px 4px 0 0;
+            -o-border-radius: 4px 4px 0 0;
+            border-radius: 4px 4px 0 0;
+            -webkit-box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15);
+            -moz-box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15);
+            box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15);
+            background: #f6f6f6;
+            color: #888888;
+        }
+
+        .circulo-internet-connection {
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            background: #80d580;
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            -ms-border-radius: 50%;
+            -o-border-radius: 50%;
+            border-radius: 50%;
+            display: block;
+            position: absolute;
+            top: 0;
+            bottom: 1px;
+            left: 8px;
+            margin: auto;
+            height: 9px;
+            width: 9px;
+        }
+
+        .ui-icon-closethick {
+            background-image: url('images/ui/close.png') !important;
+            background-position: 25% 20%;
+            ;
+        }
+
+        .ui-icon-circle-triangle-e {
+            background-image: url('../images/ui/next-arrow.png') !important;
+        }
+
+        .ui-icon-circle-triangle-w {
+            background-image: url('../images/ui/previous-arrow.png') !important;
+        }
+
+
+        #footer > div {
+            overflow: hidden;
+        }
+
+        .ui-dialog .ui-dialog-content {
+            background-color: white;
+        }
+
+        .ui-widget-header {
+            background: #F9B70A url("images/ui-bg_gloss-wave_35_f6a828_500x100.png") 50% 50% repeat-x;
+        }
+
+        .ui-dialog .ui-dialog-content {
+            padding: 18px 0px 1px 21px;
+        }
+
+        .p66 {
+            width: 66%;
+        }
+
+        .container {
+            padding-bottom: 0px; 
+        }
+
+    </style>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var height = window.innerHeight;
+            height_fin = height + "px";
+            $('#content').css('min-height', height_fin);
+            setInterval("Tamanio()", 500);
+            //setTimeout("$('#dialog').dialog('open');", 500);
+        });
+
+        function abrirPaginaTwitter() {
+            window.open("http://twitter.com/home?status=Obtuve una puntuación de " + document.visor.ganadas.value + " frase(s) acertadas en el juego ahorcado de la aplicación Alerta de Consumo de Drogas. ¿Puede superarme?");
+
+        }
+
+        var palabra
+        var droga
+        
+
+        var libreriaPalabras = new Array("f_o_m_e_n_t_a_r_*_l_a_*_s_a_l_u_d_*_m_e_n_t_a_l",
+                                         "f_o_r_t_a_l_e_c_e_r_*_l_a_s_*_c_a_p_a_c_i_d_a_d_e_s_*_d_e_*_l_a_*_p_e_r_s_o_n_a",
+                                         "p_e_r_s_o_n_a_l_*_s_a_l_u_d_*_p_r_o_d_u_c_t_i_v_a_*_c_i_u_d_a_d_a_n_a",
+                                         "j_o_s_h_u_a_*_m_i_t_r_o_t_t_i_*_v_e_n_t_u_r_a",
+                                         "d_e_s_a_r_r_o_l_l_a_r_*_h_a_b_i_l_i_d_a_d_e_s_*_y_*_c_o_m_p_e_t_e_n_c_i_a_s_*_e_n_t_r_e_*_l_o_s_*_d_e_s_m_o_v_i_l_i_z_a_d_o_s",
+                                         "a_c_c_i_o_n_e_s_*_d_e_*_s_e_r_v_i_c_i_o_*_s_o_c_i_a_l",
+                                         "p_e_r_s_o_n_a_s_*_a_c_r_e_d_i_t_a_d_a_s_*_c_o_m_o_*_d_e_s_m_o_v_i_l_i_z_a_d_a_s_*_p_o_r_*_e_l_*_c_o_d_a")
+        var libreriaPistas = new Array("Objetivo de la dimensión personal",
+                                       "Objetivo de la dimensión productiva",
+                                       "4 de las dimensiones de la ruta de integración",
+                                       "Director general de la ACR",
+                                       "Que busca la reintegración",
+                                       "Acciones fundamentales para generar espacios de reconciliación",
+                                       "¿Quienes pueden acceder al proceso de Reintegración?")
+        var partes = 1
+        var colNueva = 0
+        var jugando
+
+
+        function ObtienePalabra() {
+            //obtiene la palabra para jugar de forma pseudoaleatoria
+            var indice = Math.round(Math.random() * 6)
+            var cadena = new String(libreriaPalabras[indice])
+            droga = new String(libreriaPistas[indice])
+            palabra = cadena.split("_")
+        }
+
+
+        function DibujaHombre(visor, partes) {
+            //dibuja el hombre ahorcado
+            //partes indica el numero de partes a dibujar
+            var dibujo = ""
+            if (partes < 11)
+                $("#image_ahorcado").attr("src", "images/peces/pez" + partes + ".png");
+        }
+
+
+        function DibujaLetra(visor, letra) {
+            //dibuja una letra de la palabra
+            //posicion indica donde debe dibujar la letra
+            var flag = false
+            //indica si se encontro la letra
+            //obtiene cadena actual
+            var cadena = new String(visor.displayPalabra.value.replace(/     /g, " * "))
+            //la separa en sus espacios
+            var letrasCadena = cadena.split(" ")
+            cadena = ""
+            for (var x = 0; x < palabra.length; x++) {
+                if (palabra[x] == letra) {
+                    cadena += letra + " "
+                    flag = true
+                } else {
+                    if (palabra[x] == "*") {
+                        cadena += "    "
+                    } else {
+                        cadena += letrasCadena[x] + " "
+                    }
+                }
+            }
+            visor.displayPalabra.value = cadena
+            return flag
+        }
+
+
+        function NuevaLetra(visor, letra) {
+            //añade letra lista de letras
+            visor.displayLetras.value += letra + " "
+            //comprueba si ha de pasar a la siguiente fila
+            if (colNueva == 3) {
+                visor.displayLetras.value += "\n"
+                colNueva = 0
+            } else
+                colNueva++
+        }
+
+
+        function Juega(visor, letra) {
+            //comprueba si esta jugando
+            if (jugando) {
+                //ciclo de jugada
+                //1. añade letra a la lista
+                NuevaLetra(visor, letra)
+                //2. dibuja la letra y comprueba si acierto
+                var acierto = DibujaLetra(visor, letra)
+                //3. si no acierto, dibuja hombre
+                if (!acierto)
+                    DibujaHombre(visor, ++partes)
+                //4. comprueba si fin
+                if (partes == 10)
+                    FinJuego(false)
+                else if (CompruebaPalabra(visor))
+                    FinJuego(true)
+            } else {
+                alert('Pulsa Juego nuevo para comenzar\nuna partida nueva.')
+            }
+        }
+
+        function IniciaJuego(visor) {
+            //inicializa visor y variables globales
+            jugando = true
+            partes = 1
+            colNueva = 0
+            ObtienePalabra()
+            DibujaHombre(visor, partes)
+            visor.displayPalabra.value = ""
+            for (var x = 0; x < palabra.length; x++)
+                if (palabra[x] == "*") {
+                    visor.displayPalabra.value += "    "
+                } else {
+                    visor.displayPalabra.value += "_ "
+                }
+            visor.displayLetras.value = ""
+        }
+
+        function CompruebaPalabra(visor) {
+            //comprueba si se completo toda la palabra
+            var fin = true
+            //obtiene cadena actual
+            var cadena = new String(visor.displayPalabra.value)
+            //la separa en sus espacios
+            var letrasCadena = cadena.split(" ")
+            for (var x = 0; x < letrasCadena.length; x++)
+                if (letrasCadena[x] == "_")
+                    fin = false
+            return fin
+        }
+
+
+        function FinJuego(resultado) {
+            //indica que si se ha perdido o ganado
+            var solucion = ""
+            jugando = false
+            if (resultado) {
+                document.visor.ganadas.value++
+                alert("¡Has ganado! " + solucion + " - " + droga)
+            } else {
+                document.visor.perdidas.value++
+                //construye la palabra solucion
+                for (var x = 0; x < palabra.length; x++)
+                    solucion += palabra[x]
+                while (solucion.toString().indexOf("*") != -1) {
+                    solucion = solucion.toString().replace("*", " ");
+                }
+                alert("¡Has perdido!\n La frase era: " + solucion + "- ")
+            }
+        }
+
+        function abrirPaginaTwitter() {
+            window.open("http://twitter.com/home?status=Obtuve una puntuación de " + document.visor.ganadas.value + " frase(s) acertadas en el juego peces sin agua de la aplicación de la ACR. ¿Puede superarme?");
+
+        }
+
+        function mostrarPista(num) {
+            if (num == 1) {
+                if (droga != undefined) {
+                    alert(droga);
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <div id="preloader">
+        <div id="status">
+            <p class="center-text">
+                Cargando contenido... <em>La carga dependen de la velocidad del internet!</em>
+            </p>
+        </div>
+    </div>
+    <div class="all-elements">
+        <div id="sidebar" class="page-sidebar">
+            <div class="page-sidebar-scroll">
+                <div class="sidebar-content-background">
+                    <div class="sidebar-section">
+                        <a href="#" class="sidebar-close"></a><em></em>
+                    </div>
+                    <div class="sidebar-decoration">
+                    </div>
+                    <a href="#" class="sidebar-logo">
+                        <img src="images/logo_odc.png" height="52" alt="img">
+                    </a>
+                    <div class="sidebar-navigation">
+                        <div class="sidebar-decoration">
+                        </div>
+                        <div class="sidebar-breadcrumb">
+                            REINTEGRACION
+                        </div>
+                        <div class="sidebar-decoration">
+                        </div>
+                        <div class="nav-item">
+                            <a href="index.html" class="active-nav home-icon">
+                                Inicio <em class="selected-item"></em>
+                            </a>
+                        </div>
+                        <div class="sidebar-decoration">
+                        </div>
+                        <div class="nav-item">
+                            <a href="plan_reintegrado.html" class="active-nav home-favoritas">
+                                Mis planes de trabajo
+                                <em class="unselected-item"></em>
+                            </a>
+                        </div>
+                        <div class="sidebar-decoration">
+                        </div>
+                        <div class="nav-item">
+                            <a href="dimensiones_publica.html" class="active-nav home-dimensiones">
+                                Dimensiones de la ACR
+                                <em class="unselected-item"></em>
+                            </a>
+                        </div>
+                        <div class="sidebar-decoration">
+                        </div>
+                        <div class="nav-item">
+                            <a href="mapa.html" class="active-nav home-maps">
+                                Puntos de atención
+                                <em class="unselected-item"></em>
+                            </a>
+                        </div>
+                        <div class="sidebar-decoration">
+                        </div>
+                        <div class="nav-item">
+                            <a href="vacantes_favoritas.html" class="active-nav home-exito">
+                                Casos de éxito
+                                <em class="unselected-item"></em>
+                            </a>
+                        </div>
+                        <div class="sidebar-decoration">
+                        </div>
+                        <div class="nav-item">
+                            <a href="vacantes_favoritas.html" class="active-nav home-jugar">
+                                Aprende jugando
+                                <em class="unselected-item"></em>
+                            </a>
+                        </div>
+                        <div class="sidebar-decoration">
+                        </div>
+                        <div class="sidebar-breadcrumb">
+                            USUARIOS ACR
+                        </div>
+                        <div class="sidebar-decoration">
+                        </div>
+                        <div class="nav-item">
+                            <a href="inicio-sesion.html" class="active-nav home-admin">
+                                Inicio sesión
+                                <em class="unselected-item"></em>
+                            </a>
+                        </div>
+
+                        <div class="sidebar-breadcrumb">
+                            INFORMACIÓN
+                        </div>
+                        <div class="sidebar-decoration">
+                        </div>
+                        <div class="nav-item">
+                            <a href="faqs.html" class="active-nav home-faqs">
+                                Preguntas Frecuentes <em class="unselected-item">
+                                </em>
+                            </a>
+                        </div>
+                        <div class="sidebar-decoration">
+                        </div>
+                        <div class="nav-item">
+                            <a href="acerca_de.html" class="active-nav home-info-about">
+                                Acerca de <em class="unselected-item">
+                                </em>
+                            </a>
+                        </div>
+                        <div class="sidebar-decoration">
+                        </div>
+                    </div>
+                    <p class="sidebar-copyright">
+                        SERVICIO DE EMPLEO MÓVIL 2014
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div id="content" class="page-content">
+            <div id="header" class="content-controls" style="margin-bottom: 10px; padding-bottom: 10px;
+                background-color: #C51E2D;">
+                <a href="#" class="deploy-sidebar"></a><em style="text-transform: uppercase; font-size: medium;
+                    font-weight: bold; color: white; text-align: center;">Agencia Colombiana para la Reintegración</em>
+            </div>
+            <div class="content">
+                <div class="container no-bottom" style="text-align: center; margin-top: 10px;">
+                    <h3>
+                        ¡Aprende de la Reintegración jugando Peces sin agua!
+                    </h3>
+                </div>
+                <div class="content">
+                    <form name="visor">
+                        <center>
+                            <div class="one-half">
+                                <input class="button-icon icon-balloons button-turqoise" onclick="IniciaJuego(this.form)"
+                                       type="button" value="Juego nuevo" name="Inicia">
+                            </div>
+                            <div class="two-half last-column">
+                                <div class="container no-bottom">
+                                    <div class="container no-bottom">
+                                        <label style="float: left;">
+                                            Ganadas:&nbsp;&nbsp;
+                                        </label>
+                                        <input value="0" name="ganadas" readonly style="height: 20px; float: left; width: 20px;">
+                                    </div>
+                                    <div class="container no-bottom">
+                                        <label style="float: left;">
+                                            Perdidas:&nbsp;&nbsp;
+                                        </label>
+                                        <input value="0" name="perdidas" readonly style="height: 20px; float: left; width: 20px;">
+                                    </div>
+                                </div>
+                                <div class="container no-bottom">
+                                    <ul class="icon-list" style="float: left;">
+                                        <li class="info-list" style="padding-left: 20px;">
+                                            <a href="#" onclick="mostrarPista(1)">
+                                                Pista
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="container no-bottom" style="display: none;">
+                                <img class="responsive-image" src="images/peces/pez1.png" alt="img" id="img_pista">
+                            </div>
+                            <div class="container no-bottom">
+                                <div class="static-notification-green" style="margin-bottom: 5px; background-color: #16a085;">
+                                    Letras Ingresadas
+                                    <p class="center-text uppercase" style="margin-top: 0px;">
+                                        <input type="text" name="displayLetras" style="margin-left: 2%; width: 96%;" />
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="container no-bottom" style="margin-bottom: 5px;">
+                                <div class="static-notification-green" style="margin-bottom: 5px; background-color: #16a085;">
+                                    Efecto a encontrar
+                                    <p class="center-text uppercase" style="margin-top: 0px;">
+                                        <textarea name="displayPalabra" style="margin-left: 2%; width: 96%;" rows="2"></textarea>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="one-half">
+                                <img class="responsive-image" src="images/peces/pez1.png" alt="img" id="image_ahorcado">
+                            </div>
+                            <div class="two-half last-column">
+                                <div class="container
+                        no-bottom">
+                                    <input onclick="Juega(this.form, 'a')" type="button" value=" A " name="botA" class="botonLetra">
+                                    <input onclick="Juega(this.form, 'b')" type="button" value=" B " name="botB" class="botonLetra">
+                                    <input onclick="Juega(this.form, 'c')" type="button" value=" C " name="botC" class="botonLetra">
+                                    <input onclick="Juega(this.form, 'd')" type="button" value=" D " name="botD" class="botonLetra">
+                                    <input onclick="Juega(this.form,'e')" type="button" value=" E " name="botE" class="botonLetra">
+                                    <input onclick="Juega(this.form,'f')" type="button" value=" F " name="botF" class="botonLetra">
+                                    <input onclick="Juega(this.form,'g')" type="button" value=" G " name="botG" class="botonLetra">
+                                    <input onclick="Juega(this.form,'h')" type="button" value=" H " name="botH" class="botonLetra">
+                                    <input onclick="Juega(this.form,'i')" type="button" value=" I " name="botI" class="botonLetra">
+                                    <input onclick="Juega(this.form,'j')" type="button" value=" J " name="botJ" class="botonLetra">
+                                    <input onclick="Juega(this.form,'k')" type="button" value=" K " name="botK" class="botonLetra">
+                                    <input onclick="Juega(this.form,'l')" type="button" value=" L " name="botL" class="botonLetra">
+                                    <input onclick="Juega(this.form,'m')" type="button" value=" M " name="botM" class="botonLetra">
+                                    <input onclick="Juega(this.form,'n')" type="button" value=" N " name="botN" class="botonLetra">
+                                    <input onclick="Juega(this.form,'ñ')" type="button" value=" Ñ " name="botÑ" class="botonLetra">
+                                    <input onclick="Juega(this.form,'o')" type="button" value=" O " name="botO" class="botonLetra">
+                                    <input onclick="Juega(this.form,'p')" type="button" value=" P " name="botP" class="botonLetra">
+                                    <input onclick="Juega(this.form,'q')" type="button" value=" Q " name="botQ" class="botonLetra">
+                                    <input onclick="Juega(this.form,'r')" type="button" value=" R " name="botR" class="botonLetra">
+                                    <input onclick="Juega(this.form,'s')" type="button" value=" S " name="botS" class="botonLetra">
+                                    <input onclick="Juega(this.form,'t')" type="button" value=" T " name="botT" class="botonLetra">
+                                    <input onclick="Juega(this.form,'u')" type="button" value=" U " name="botU" class="botonLetra">
+                                    <input onclick="Juega(this.form,'v')" type="button" value=" V " name="botV" class="botonLetra">
+                                    <input onclick="Juega(this.form,'w')" type="button" value=" W " name="botW" class="botonLetra">
+                                    <input onclick="Juega(this.form,'x')" type="button" value=" X " name="botX" class="botonLetra">
+                                    <input onclick="Juega(this.form,'y')" type="button" value=" Y " name="botY" class="botonLetra">
+                                    <input onclick="Juega(this.form,'z')" type="button" value=" Z " name="botZ" class="botonLetra">
+                                </div>
+                            </div>
+                            <div class="container no-bottom">
+                                ¡Obtenga el mayor puntaje y comparta los resultados en las redes sociales para retar
+                                a sus amigos!
+                            </div>
+                            <br />
+                            <div class="container" style="padding: 5px;">
+                                <a style="float: right;" href="#" class="goup-footer"></a>
+                                <div class="footer-socials" style="margin: 0 auto; display: table; padding-left: 32px;">
+                                    <a href="https://www.facebook.com/SPEColombia?fref=ts" target="_blank" class="facebook-footer">
+                                    </a><a onclick="abrirPaginaTwitter();" href="#" class="twitter-footer">
+                                    </a>
+                                </div>
+                            </div>
+                        </center>
+                    </form>
+                </div>
+            </div>
+            <div id="loading" class="CargandoModalBackground" style="text-align: center;">
+                <div style="top: 48%;">
+                    <img src="images/bx_loader.gif" alt="loding" style="display: inline;" />
+                </div>
+            </div>
+            <div class="container" style="padding: 5px;">
+                <p class="copyright uppercase center-text no-bottom">
+                    SERVICIO DE EMPLEO MÓVIL 2014<br>
+                    Todos los derechos reservados
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
